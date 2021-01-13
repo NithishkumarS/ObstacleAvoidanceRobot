@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<center>
+		<style>
+			body {
+			background: linear-gradient(to bottom, #4568dc, #b06ab3) no-repeat center center fixed;
+			background-size: cover;
+			}
+			button{
+				display: block;
+				color: white;
+				background-color: rgba(0,0,0,0.6);
+				text-decoration: none;
+				border-radius: 10px;
+				font-size: 50px;
+			}
+			button:hover{
+				background-color: rgba(0,0,0,0.3);
+				color: black;
+			}
+			
+			
+		</style>
+	</center>
+	</head>
+	<body>
+		<h2> <i> RRC : Remote Robot Controller </i> </h2>
+		<button id="left"><</button> 
+		<button id="right">></button>
+		<button id="forward">^</button> 
+		<button id="reverse">v</button>  
+		<button id="stop">O</button>
+			
+		<script src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$(".robot").click(function()
+				{
+					var input = $(this).attr('id'); 
+					$.get("http://192.168.1.98:80/", {robot:input}); 
+				});
+			});
+		</script>
+
+	</body>
+</html>
