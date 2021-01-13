@@ -13,11 +13,12 @@ The task is to build a software for a simple remote control robot with obstacle 
 
 ![Circuit](img/schematic.png)
 
-System Architecture
-Arduino UNO
-ESP8266 setup/ connection diagram
-Motor drive 
-Switches
+### System Architecture
+A remote client controls the robot by sending the commands to the arduino MCU via the ESP8266 wifi module. The MCU in turn sends a PWM signals to the motor based on the manuever decided. The momentary switches indicate the presence of obstacles and trigger a manuever change over riding the commands sent by the remote controller. 
+### Arduino UNO
+### ESP8266 setup/ connection diagram
+### Motor drive 
+### Switches
 
 
 ## Web Interface
