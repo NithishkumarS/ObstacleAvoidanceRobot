@@ -1,15 +1,17 @@
-# Obstcale Avoidance robot
+# Obstacle Avoidance robot
 
 ## To Do List
-[] Circuit diagram of motors and sensors with UNO
-[] Pin diagram with ESP8266
-[x] Code to control Motor driver with UNO
-[] Autonomy node with adruino
-[x] Web page creation
-[x] Backend to send ESP8266
-[] Coding style / documentation
+- [x] Circuit diagram of motors and sensors with UNO
+- [x] Pin diagram with ESP8266
+- [x] Code to control Motor driver with UNO
+- [x] Autonomy node with adruino
+- [x] JS to send ESP8266
+- [] Documentation
 
 ## Hardware Setup
+
+![Circuit](img/schematic.png)
+
 Circuit schematic
 Arduino UNO
 ESP8266 setup/ connection diagram
@@ -22,7 +24,5 @@ HTML Client
 
 
 ## Dependencies
-
-## License
 
 
