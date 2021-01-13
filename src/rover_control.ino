@@ -12,21 +12,21 @@
 #include "esp.h"
 
 // L293D motor driver connection for motor A
-#define motorA_pwm 6 // right PWM control pin (ENA)
-#define motorA_in1 8 // right direction control pin (IN1)
-#define motorA_in2 7 // right direction control pin (IN2)
+#define motorA_pwm 3 // right PWM control pin (ENA)
+#define motorA_in1 4 // right direction control pin (IN1)
+#define motorA_in2 5 // right direction control pin (IN2)
 
 // L293D motor driver connection for motor B
-#define motorB_pwm 11 // left PWM control pin (ENB)
-#define motorB_in3 10 // left direction control pin (IN3)
-#define motorB_in4 9 // left direction control pin (IN4)
+#define motorB_pwm 10 // left PWM control pin (ENB)
+#define motorB_in3 7 // left direction control pin (IN3)
+#define motorB_in4 8 // left direction control pin (IN4)
 
 // Momentary switch pins
-#define left_switch 4  // left bumper switch pin
-#define right_switch 5 // right bumper switch pin
+#define left_switch 11  // left bumper switch pin
+#define right_switch 12 // right bumper switch pin
 
-#define RX 2
-#define TX 3
+#define RX 0
+#define TX 1
 
 // Serial communication with ESP8266 
 SoftwareSerial esp(RX,TX); 
