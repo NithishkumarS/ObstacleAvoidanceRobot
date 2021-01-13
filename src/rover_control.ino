@@ -29,7 +29,7 @@
 #define TX 3
 
 // Serial communication with ESP8266 
-SoftwareSerial esp_serial(RX,TX); 
+SoftwareSerial esp(RX,TX); 
 
 // Configuring Robot motor A and motor B pins (Creating Robot class object)
 Rover rover_object(motorA_pwm, motorA_in1, motorA_in2,
@@ -41,19 +41,19 @@ void setup() {
   Serial.begin(9600);
   
   // Runs AT commands to configure and operate the ESP8266 module
-  esp_setup(esp_serial);
+  esp_setup(esp);
     
   // Initial rest state of the rover
   rover_object.Stop();
 }
 
 void loop() {
-  if(esp_serial.available())
+  if(esp.available())
   {
-    if(esp_serial.find("+IPD,"))
+    if(esp.find("+IPD,"))
     {
-      esp_serial.find("?");
-      String data = esp_serial.readStringUntil(' ');
+      esp.find("?");
+      String data = esp.readStringUntil(' ');
       String remote_command = msg.substring(6);
       delay(100);      
       

@@ -4,8 +4,12 @@
  *  Created on: Jan 12, 2020
  *      Author: Nithish
  *
- *  Reference: https://www.instructables.com/How-to-use-the-L293D-Motor-Driver-Arduino-Tutorial/
+ *  References: https://www.instructables.com/How-to-use-the-L293D-Motor-Driver-Arduino-Tutorial/
+ *
  */
+
+#ifndef INCLUDE_ROVER_H_
+#define INCLUDE_ROVER_H_
 
 class Rover {
   private:
@@ -110,4 +114,4 @@ class Rover {
 
 };
 
-#endif
+#endif   /* INCLUDE_ROVER_H_ */
