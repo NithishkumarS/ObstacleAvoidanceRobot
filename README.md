@@ -7,11 +7,13 @@ The task is to build a software for a simple remote control robot with obstacle 
 - [x] Code to control Motor driver with UNO
 - [x] Autonomy node with adruino
 - [x] JS to send ESP8266
-- [] Documentation
+- [x] Documentation
 
 ## Hardware Setup
 
 ![Circuit](img/schematic.png)
+
+Pin connection to different components is shown in the figure. Further details can be found [here](https://lastminuteengineers.com/l293d-dc-motor-arduino-tutorial/)
 
 ### System Architecture
 A remote client controls the robot by sending the commands to the arduino MCU via the ESP8266 wifi module. The MCU in turn sends a PWM signals to the motor based on the manuever decided. The momentary switches indicate the presence of obstacles and trigger a manuever change over riding the commands sent by the remote controller. 
@@ -21,11 +23,12 @@ Arduino UNO is used to configure the ESP8266 module via serial inputs. The RX, T
 The internal pull up resistors are useful in detecting the state of the momentary switches. When the switches are triggered, it connects to the ground and provides a LOW state with the help of pull down resistors. 
 
 ### ESP8266 setup
-The ESP8266 communicates with the Arduino through Serial Communication. AT commands are used to activate and enable wireless communication. A static IP of our choice is set up for the wifi module. 
+The ESP8266 communicates with the Arduino through Serial Communication. AT commands are used to activate and enable wireless communication. A static IP of our choice is set up for the wifi module. </br>
 The required update frequency > 10Hz is set by adjusting the baud rate of the serial communication in the code. 
 
 ### Motor drive (L293D)
-Each motor is controlled by 2 control pins (IN) and a PWM pin (ENA). The two control pins decide the direction of current flow, ie the direction of motor shaft rotation. Pins with PWM capability, 3 and 10 are used to adjust the speed of the motors.
+Each motor is controlled by 2 control pins (IN) and a PWM pin (ENA). The two control pins decide the direction of current flow, ie the direction of motor shaft rotation. Pins with PWM capability, 3 and 10 are used to adjust the speed of the motors. </br>
+Pulse Width Modulation signal controls the speed of the motor in the range (0, 255). The generally preferred value of 120 is used.
 
 Chart of different logic states is provided below
 ![chart](img/L293D.png)
